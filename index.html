@@ -8,33 +8,110 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/b63eb65403.js" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="index.css">
+    <!-- styles -->
+
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/landing.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/tools.css">
+    <link rel="stylesheet" href="./styles/projects.css">
+    <link rel="stylesheet" href="./styles/contact.css">
 </head>
 
- <nav>
-    <span>logo</span>
-    <div role="button" onclick="toogleNavBar()" class="bar-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div > 
-    <div class="nav-wrapper">
-        <span class="nav-collapse" role="button" onclick="toogleNavBar()" >X</span>   
-        <ul class="nav-list">
-            <li class="nav-list-item"><a href="#">Home</a></li>
-            <li class="nav-list-item"><a href="#">About</a></li>
-            <li class="nav-list-item"><a href="#">Projects</a></li>
-            <li class="nav-list-item"><a href="#">Contact</a></li>
-        </ul>
+<header>
+    <div class="container">
+            <a class="navbar-brand " href="#"><i class="fa-brands fa-gg fa-2x"></i></a>
+        <span role="button" onclick="toogleNavBar()" class="bar-icon">
+           <a href="#"><i class="fa-solid fa-bars fa-2x"></i></a> 
+        </span > 
+        <nav> 
+            <span class="btn-collapse" role="button" onclick="toogleNavBar()" >X</span>   
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="#">Home</a></li>
+                <li class="nav-list-item"><a href="#about">About</a></li>
+                <li class="nav-list-item"><a href="#tools">Tools</a></li>
+                <li class="nav-list-item"><a href="#projects">Projects</a></li>
+                <li class="nav-list-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    
-</nav>
+</header>
+
    
 <main>
-    <section class="hero"><button onclick="toggleDarkMode()" >sss</button>
+  
+        <div class="toggle-theme"  onclick="toggleDarkMode()">
+            <!-- <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-moon"></i> -->
+            <div class="icon-wrapper">
+            <div class="slider"></div>
+            <i class="fa-solid fa-sun icon-opacity-sun"></i>
+            <i class="fa-solid fa-moon icon-opacity-moon"></i>
+        </div>
+           
+        </div>
+    <section id="landing">
+     <div class="container">
+        <!-- <object data="./assets/Gabriel Guillermo.pdf" type="application/pdf" width="100%" height="600">
+            <p>Alternative text - include a link <a href="your_pdf_file.pdf">to the PDF</a></p>
+        </object> -->
+        <!-- <iframe src="./assets/Gabriel Guillermo.pdf" width="100%" height="600"></iframe> -->
+        <!-- <a href="./assets/Gabriel Guillermo.pdf" target="_blank">View PDF in new tab</a> -->
+        <img src="./assets/images/my-image.png" alt="profile image" title="profile image">      
+        <h1> Full-Stack Web Developer</h1>
+        <!-- <h1>Full-Stack Web Developer</h1> -->
+        <p> Hi! I'm <strong>Gabriel D. Guillero </strong>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos velit atque fugiat dicta? Maxime quibusdam hic autem. Ab, neque placeat atque accusamus fugit perferendis error aliquid voluptatem ducimus totam.</p>
      </section>
-    <section class="about"></section>
+    <section id="about">
+       <div class="container">
+        <h2>Tools</h2>
+        
+        <div class="fade-in">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero porro architecto sunt ipsa rem praesentium adipisci, impedit quia excepturi dolor nisi ullam ipsum. Similique eos odit sint quia mollitia dolorem?
+            Consequuntur vero ullam, laudantium deleniti, debitis consectetur, exercitationem accusamus nesciunt pariatur ipsum facilis sint ipsam? Voluptate eligendi quo asperiores molestias laudantium officia molestiae necessitatibus illum quia? Quas non suscipit minima.
+            Ex ad esse, consectetur deleniti rem non minima, ipsa at architecto alias illo cum, eaque suscipit sunt autem pariatur sequi nemo doloribus cupiditate. Voluptatum blanditiis animi accusantium! Cumque, incidunt aperiam.
+            Quo quidem, vel accusantium harum reiciendis distinctio saepe doloremque accusamus numquam? Voluptas reprehenderit fuga labore quod odio unde autem doloremque sunt perferendis voluptatem accusantium nesciunt maiores similique, numquam culpa mollitia.
+            Explicabo quod, suscipit, ipsam magni debitis possimus vero veniam unde delectus neque ex fugit fugiat id nulla doloribus vel rerum maiores, sed culpa error quasi eum mollitia beatae. Laudantium, labore!
+            Nemo alias nesciunt quidem, adipisci quo consequuntur aliquam minus nulla tenetur dicta mollitia unde, quod iusto architecto provident pariatur consequatur. Earum amet omnis libero recusandae quo consequuntur magni, harum eveniet.
+            Vitae consequatur quia debitis iste, voluptatum necessitatibus fugit. Tenetur eum, asperiores explicabo iure fugiat maxime laboriosam omnis fuga quod nihil exercitationem enim, illo praesentium cum quaerat sapiente ipsa. Inventore, culpa!
+            Provident corrupti mollitia impedit debitis quidem neque, accusantium porro! Exercitationem incidunt maiores quaerat unde voluptas, quis, esse ipsum nisi architecto odit, minus aliquam molestias ipsam obcaecati deserunt. Quo, aut tempore?
+            Iusto sequi quam inventore dolorem tempore aliquid rem in dolorum cum iure aliquam, repudiandae quas fugiat nam, at perferendis voluptas! Autem omnis quam voluptas laudantium neque numquam nemo quia corporis!
+            Vitae magni ratione nisi nihil, eligendi ullam, eaque tenetur temporibus quaerat explicabo corrupti odit nulla ipsam! Dolorem at quae minima amet voluptates vel impedit voluptatum, tempore reiciendis aperiam obcaecati architecto.
+            Cum nemo at placeat? Impedit distinctio alias voluptatum earum corporis! Nisi praesentium laborum ex adipisci nihil molestias culpa possimus explicabo numquam expedita nulla incidunt in, est voluptates officia modi voluptatum.
+            Voluptatem provident, sit aliquid autem animi a ad optio iure ratione placeat laboriosam eius ipsum vel quis, molestiae nulla cumque repellendus facere ex magni. In, repellat neque. Maxime, ad ipsam!
+            Soluta incidunt ipsa quasi quo iste ad, placeat accusantium recusandae saepe, explicabo perspiciatis cum tempora facilis. Sunt perspiciatis commodi illo cupiditate! Harum quasi repudiandae deserunt veritatis est cumque voluptatibus ex.
+            Voluptatum id tempora natus beatae dicta optio commodi molestias ab consequatur harum, sint eveniet ex nemo illo quam facilis, hic ipsa voluptates perspiciatis. Quae libero aperiam obcaecati officia. Ullam, recusandae.
+            Autem distinctio quam reprehenderit iure magnam beatae. Quod quia deserunt officia vitae. Nesciunt asperiores, nobis officiis voluptate assumenda cumque. Nisi ea consequuntur voluptas sequi. Facilis, a porro? Veniam, nihil atque!
+            Quas sit velit voluptatum saepe, quis earum perferendis debitis sunt, dolor in incidunt iste numquam quibusdam tempora excepturi maiores rem doloribus officiis, nostrum accusamus deleniti? Deleniti, officiis temporibus. Neque, explicabo!
+            Ex ea, deleniti modi nobis voluptatum illo expedita repellat voluptas delectus? Vero, eum natus. Consequatur illo numquam voluptates obcaecati, ut eos laudantium incidunt praesentium voluptate odit pariatur minus, id fuga!
+            Fuga, quia! Voluptate commodi dicta necessitatibus dolorum vero sit recusandae harum impedit neque praesentium adipisci minus rem temporibus nobis cumque, quisquam laudantium magni quis possimus amet natus doloremque ratione architecto.
+            Itaque nihil fuga placeat exercitationem officia odit libero ut, obcaecati commodi hic vel veniam. Error nihil rem, necessitatibus deleniti vel, beatae, sapiente vitae asperiores et iure nobis eius excepturi aut.
+            Animi quis eos quasi totam voluptates nemo quam hic amet reiciendis adipisci minus sit, optio maiores nostrum praesentium, est qui assumenda. Placeat dolore quo eligendi ea! Voluptatibus voluptate nobis quidem.</p>
+          </div>
+       </div>
+    </section>
+    <section  id="tools">
+        <div class="container">
+         <h2>Tools</h2>
+         
+        </div>
+     </section>
+     <section  id="projects">
+        <div class="container">
+         <h2>Tools</h2>
+       
+        </div>
+     </section>
+     <section  id="contact">
+        <div class="container">
+         <h2>Tools</h2>
+         
+        </div>
+     </section>
 </main>
 <footer></footer>
 <script src="./index.js"></script>

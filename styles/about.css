@@ -1,0 +1,4 @@
+#about{
+    background-color: var(--about-bg-color);
+    /* background: linear-gradient(to right,var(--about-bg-color),rgb(66, 44, 78)); */
+}
