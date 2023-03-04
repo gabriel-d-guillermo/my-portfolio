@@ -1,9 +1,5 @@
 const body = document.body;
 const element = document.querySelector(".fade-in");
-const navBar = document.querySelector("nav");
-const slider = document.querySelector(".slider");
-const iconMoon = document.querySelector(".fa-moon");
-const iconSun = document.querySelector(".fa-sun");
 
 //when page laoded
 window.onload = function () {
@@ -22,13 +18,20 @@ window.addEventListener("scroll", function () {
   }
 });
 
-function toggleDarkMode() {
-  body.classList.toggle("dark-mode");
+//toggle dark mode
+const slider = document.querySelector(".slider");
+const iconMoon = document.querySelector(".fa-moon");
+const iconSun = document.querySelector(".fa-sun");
+
+function toggleLightMode() {
+  body.classList.toggle("light-mode");
   slider.classList.toggle("toogle");
   iconMoon.classList.toggle("icon-opacity-moon");
   iconSun.classList.toggle("icon-opacity-sun");
-  console.log("asd");
 }
+
+//toggle navbar
+const navBar = document.querySelector("nav");
 
 function toogleNavBar() {
   navBar.classList.toggle("navbar-expand");

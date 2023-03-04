@@ -1,120 +1,147 @@
 
 header{
-    background-color: var(--background-color);
-    /* background-color: var(--about-bg-color); */
-    /* border-bottom:1px solid var(--primary-color);  */
-   
-    transition: background-color 1s ease-in-out;
+background-color: var(--bg-primary-clr);
+}
+
+header .container{
+display: flex;
+align-items: center;
+height: 67px;
+padding-left: 2rem;
+}
+
+.navbar-logo{
+  color:var(--accent-clr);
+}
+
+header a{
+font-weight: 700;
+display: block;
+color:var(--text-primary-clr);
+font-size: clamp(1rem, 1vw, 1.5rem);
+}
+
+header .bar-icon{
+display: none;
+/* border:1px solid var(--dark-color); */
+border-radius:3px;
+padding: 0 0.1rem;
+color:var(--accent-clr)
+}
+
+header .bar-icon:active{
+border:1px solid var(--accent-clr);
+}
+
+header nav{
+margin-left: auto;
+}
+
+header nav li{
+position: relative;
+padding: .5rem 1rem;
+display: inline-block;
+}
+
+nav li a::before, nav li a::after{
+  content: '';
+width: 0;
+height: 0;
+transition: width .2s ease-in-out,height .5s ease-in-out;
+
+}
+
+nav li a:hover:before{
+/* content: ''; */
+opacity: 1;
+position: absolute;
+top:0px;
+left: 0;
+width: 40%;
+height: 40%;
+border-top: 4px solid  ;
+border-left: 4px solid  ;
+border-color: var(--accent-clr) ;
+/* border-image:var(--accent-clr) 1; */
+}
+
+nav li a:hover:after{
+content: '';
+opacity: 1;
+position: absolute;
+bottom:0px;
+right: 0;
+width: 40%;
+height: 40%;
+border-bottom: 4px solid  ;
+border-right: 4px solid  ;
+border-color: var(--accent-clr) ;
+/* border-image:var(--accent-clr) 1; */
+}
+
+nav .btn-collapse{
+display: none;
+}
+
+
+/*  */
+@media (max-width:480px){
+
+  header .bar-icon{
+    display: block;
+    margin-left: auto;
+    color:var(--accent-clr)
   }
 
-  header .container{
+  .navbar-expand{
+    width: 100%;
+    opacity: 1;
+  }
+
+  header nav{
+    position: fixed;
     display: flex;
-    align-items: center;
-    height: 51px;
-    
-  }
-  header a{
-    text-decoration: none;
-    color:var(--text-color);
-    font-weight: 700;
-    display: block;
-  }
-  header .bar-icon{
-    display: none;
-    border:1px solid var(--dark-color);
-    border-radius:3px;
-    padding: 0 0.1rem;
-    color:var(--dark-color)
-  }
-  header .bar-icon:active{
-    border:1px solid white;
-  }
-  nav{
-    margin-left: auto;
-  }
-  nav li{
-    position: relative;
-    padding: 1rem;
-    list-style: none;
-    display: inline-block;
-  }
- 
-  nav li a:hover:before{
-    content: '';
-    opacity: 1;
-    position: absolute;
-    top:10px;
+    justify-content: center;
+    overflow: hidden;
+    top:0;
     left: 0;
-    width: 0.5rem;
-    height: 0.5rem;
-    border-top: 3px solid  limegreen ;
-    border-left: 3px solid  limegreen;
+    width: 0px;
+    height: 100vh;
+    background-color: var(--bg-secondary-clr);
+    transition:width 0.6s ease-in-out,opacity 0.6s ease-in-out;
+    font-size: 1.5rem;
+    opacity: 0;
+    z-index: 999;
   }
-  
-  nav li a:hover:after{
-    content: '';
-    opacity: 1;
-    position: absolute;
-    bottom:10px;
-    right: 0;
-    width: 0.5rem;
-    height: .5rem;
-    border-bottom: 3px solid  rgb(197, 16, 137) ;
-    border-right: 3px solid   rgb(197, 16, 137);
+
+  header ul{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    overflow: hidden;
+    margin-top:20vh;
+  }
+
+  header li a{
+    font-size: 1.7rem;
+    color:var(--accent-clr)
   }
   nav .btn-collapse{
-    display: none;
+    display: block;
+    position: absolute;
+    top:.6rem;
+    right:1rem;
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 1px solid red;
+    padding: 0.1rem .5rem;
+    border-radius: 3px;
   }
 
-  @media (max-width:480px){
-
-    header .bar-icon{
-      display: block;
-      margin-left: auto;
-    }
-    .navbar-expand{
-      width: 100%;
-      opacity: 1;
-    }
-    header nav{
-      position: fixed;
-      display: flex;
-      justify-content: center;
-      overflow: hidden;
-      top:0;
-      left: 0;
-      width: 0px;
-      height: 100vh;
-      background-color: var(--secondary-color);
-      transition:width 1s ease-in-out,opacity 1s ease-in-out;
-      font-size: 1.5rem;
-      opacity: 0;
-      z-index: 999;
-    }
-    header ul{
-      display: flex;
-      flex-direction: column;  
-      align-items: center;
-      overflow: hidden;
-      margin-top:20vh;
-    }
-  
-    nav .btn-collapse{
-      display: block;
-      position: absolute;
-      top:.6rem;
-      right:1rem;
-      color: red;
-      font-size: 1.5rem;
-      font-weight: 700;
-      border: 1px solid red;
-      padding: 0.1rem .5rem;
-      border-radius: 3px;
-    }
-    nav .btn-collapse:active{
-      border:1px solid white;
-    }
- 
-  
+  nav .btn-collapse:active{
+    border:1px solid white;
   }
-  
+
+
+}

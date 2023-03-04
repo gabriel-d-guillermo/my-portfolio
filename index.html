@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/b63eb65403.js" crossorigin="anonymous"></script>
 
     <!-- styles -->
@@ -23,14 +23,14 @@
 
 <header>
     <div class="container">
-            <a class="navbar-brand " href="#"><i class="fa-brands fa-gg fa-2x"></i></a>
+            <a class="navbar-logo " href="#"><i class="fa-brands fa-gg fa-2x"></i></a>
         <span role="button" onclick="toogleNavBar()" class="bar-icon">
-           <a href="#"><i class="fa-solid fa-bars fa-2x"></i></a> 
+         <i class="fa-solid fa-bars fa-2x"></i> 
         </span > 
         <nav> 
-            <span class="btn-collapse" role="button" onclick="toogleNavBar()" >X</span>   
-            <ul class="nav-list">
-                <li class="nav-list-item"><a href="#">Home</a></li>
+            <span class="btn-collapse" role="button" onclick="toogleNavBar()">X</span>   
+            <ul class="nav-list"  onclick="toogleNavBar()">
+                <li class="nav-list-item" ><a href="#" >Home</a></li>
                 <li class="nav-list-item"><a href="#about">About</a></li>
                 <li class="nav-list-item"><a href="#tools">Tools</a></li>
                 <li class="nav-list-item"><a href="#projects">Projects</a></li>
@@ -43,28 +43,26 @@
    
 <main>
   
-        <div class="toggle-theme"  onclick="toggleDarkMode()">
-            <div class="icon-wrapper">
-            <div class="slider"></div>
-            <i class="fa-solid fa-sun icon-opacity-sun"></i>
-            <i class="fa-solid fa-moon icon-opacity-moon"></i>
-        </div>
-           
-        </div>
+      
     <section id="landing">
-     <div class="container ">
-        
+        <div class="container ">
+            <div class="toggle-theme"  onclick="toggleLightMode()">
+                <div class="icon-wrapper">
+                    <div class="slider"></div>
+                    <i class="fa-solid fa-sun icon-opacity-sun"></i>
+                    <i class="fa-solid fa-moon icon-opacity-moon"></i>
+                </div> 
+            </div>
             <img src="./assets/images/my-image.png" alt="profile image" title="profile image">      
             <h1 class="">Full-Stack Web <br/> Developer</h1>
             <ul>
                 <li> <a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
                 <li> <a href=""><i class="fa-brands fa-linkedin"></i></a></li>
                 <li> <a href=""><i class="fa-solid fa-envelope"></i></a></li>
-            </ul>
-              
-        </div>
-      
-     </section>
+            </ul>              
+        </div> 
+    </section>
+
     <section id="about">
        <div class="container">
         <h2>Tools</h2>
