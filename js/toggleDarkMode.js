@@ -1,23 +1,24 @@
-// const body = document.body;
+const htmlBody = document.body;
 const toggleTheme = document.querySelector(".toggle-theme");
 const slider = document.querySelector(".slider");
 const iconMoon = document.querySelector(".fa-moon");
 const iconSun = document.querySelector(".fa-sun");
 
 let theme = localStorage.getItem("theme");
-console.log(theme);
+
 const toogleIcon = () => {
   slider.classList.toggle("toogle");
   iconMoon.classList.toggle("icon-opacity-moon");
   iconSun.classList.toggle("icon-opacity-sun");
 };
+
 const lightMode = () => {
-  body.classList.add("light-mode");
+  htmlBody.classList.add("light-mode");
   theme = localStorage.setItem("theme", "light");
 };
 
 const darkMode = () => {
-  body.classList.remove("light-mode");
+  htmlBody.classList.remove("light-mode");
   theme = localStorage.setItem("theme", "dark");
 };
 
@@ -29,18 +30,15 @@ if (theme === "light") {
   darkMode();
 }
 
-function toggleLightMode() {
-  slider.classList.toggle("toogle");
-  iconMoon.classList.toggle("icon-opacity-moon");
-  iconSun.classList.toggle("icon-opacity-sun");
-}
-
+//eventlistener for toggle theme
 toggleTheme.addEventListener("click", () => {
   let theme = localStorage.getItem("theme");
+
   if (theme === "dark") {
     lightMode();
   } else {
     darkMode();
   }
+
   toogleIcon();
 });

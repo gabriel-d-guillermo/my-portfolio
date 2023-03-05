@@ -1,4 +1,4 @@
-const body = document.body;
+let body = document.body;
 const element = document.querySelector(".fade-in");
 
 //when page laoded
