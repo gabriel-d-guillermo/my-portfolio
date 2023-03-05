@@ -19,16 +19,6 @@ window.addEventListener("scroll", function () {
 });
 
 //toggle dark mode
-const slider = document.querySelector(".slider");
-const iconMoon = document.querySelector(".fa-moon");
-const iconSun = document.querySelector(".fa-sun");
-
-function toggleLightMode() {
-  body.classList.toggle("light-mode");
-  slider.classList.toggle("toogle");
-  iconMoon.classList.toggle("icon-opacity-moon");
-  iconSun.classList.toggle("icon-opacity-sun");
-}
 
 //toggle navbar
 const navBar = document.querySelector("nav");
