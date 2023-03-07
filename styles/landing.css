@@ -1,15 +1,19 @@
 
 #landing{
   background-color: var(--bg-primary-clr);
-  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  min-height: calc(100vh - 51px); 
+  padding-bottom: 2rem;
+  /* background-image: var(--bg-primary-clr); */
+  /* transition: background-color 1s ease-in-out, color 1s ease-in-out; */
+
 }
 
 #landing .container{
-position: relative;
-text-align: center;
-min-height: calc(100vh - 51px);  
-padding-top: 15vh;
-padding-bottom: 3rem;
+  position: relative;
+  text-align: center; 
+  padding-top: 10vh;
+  padding-bottom: 2rem;
+  color: var(--text-primary-clr);
 }
 #landing img{
   width: 150px;
@@ -18,26 +22,42 @@ padding-bottom: 3rem;
 }
 
 #landing h1{
-  font-family: 'Fredoka One', cursive;
+
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  /* font-family: 'Climate Crisis', cursive; */
-  background:var(--gradient-clr);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 0rem;
+  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-style: italic;
   font-size:clamp(2.5rem,5vw,6rem);
+
+  background-image:var(--gradient-clr);  
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+#landing span{
+  font-size:clamp(1rem, 1.4vw,2rem);
+  font-weight: 300;
 }
 
-#landing p{
-  max-width: 700px;
-  text-align: justify;
-  margin: 0 auto;
-  line-height: 1.4;
+.btn-resume{
+  display: inline-block;
+  padding: 0.3rem .7rem;
   font-weight: 700;
-  color: var(--text-color);
+  color: var(--accent-clr);
+  margin-left:.5rem ;
+  outline: 1px solid;
+  border-radius: 3px;
+  animation: btn-animation 1s infinite alternate ;
 }
+@keyframes btn-animation{
+  100%{
+    scale: 1.07;
+  }
+}
+
 #landing ul{
   display: flex;
   justify-content: flex-end;
@@ -129,8 +149,16 @@ padding-bottom: 3rem;
     width: 100%;
     justify-content: center; 
   }
-
   .toggle-theme{
     right: 1rem;
+  }
+
+  .btn-resume{
+    position: absolute;
+    width: max-content;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: 0 auto;
   }
 }

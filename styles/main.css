@@ -1,13 +1,16 @@
 :root{
-    --bg-primary-clr:rgb(20, 20, 20);
-    --bg-secondary-clr:rgb(34, 34, 34);
+    /* --bg-primary-clr:rgb(20, 20, 20); */
+    /* --bg-secondary-clr:rgb(17, 17, 17); */
+    --bg-primary-clr:rgb(17, 17, 17);
+    --bg-secondary-clr:rgb(21, 21, 21);
     
-    --text-primary-clr:rgb(219, 219, 219);
+    --text-primary-clr:rgb(160, 160, 160);
     --text-secondary-clr:rgb(160, 160, 160);
 
     --gradient-clr:linear-gradient(to right, rgb(24, 134, 51), rgba(189, 113, 0, 0.904));
+   
     --accent-clr:rgb(128, 141, 10);
-
+    --shadow-clr:rgb(136, 133, 133);
     --dark-clr:rgb(48, 48, 48);
     --light-clr:rgb(219, 219, 219);
 
@@ -17,10 +20,10 @@
   
 .light-mode {
   --bg-primary-clr:rgb(240, 240, 240);
-  --bg-secondary-clr:rgb(224, 222, 222);
+  --bg-secondary-clr:rgb(236, 236, 236);
 
   --text-primary-clr:var(--dark-clr);
-  
+
   --primary-clr:var(--text-primary-clr);
   --seconday-clr:var(--light-clr);
 
@@ -43,11 +46,15 @@ html{
 body{
   height: 100%;
   min-width: 240px;
-  opacity: 0.1;
   background-color: rgb(20, 19, 19);
   font-family: 'Roboto', sans-serif;
-  
-  transition: opacity 2.5s ease-in-out;
+  animation : body-animate 2.5s ease-in;
+  /* transition: opacity 2.5s ease-in-out; */
+}
+
+@keyframes body-animate{
+  0%{opacity: 0.1;}
+  100%{ opacity: 1;}
 }
 
 
@@ -67,6 +74,8 @@ header, section{
   max-width: 1200px;
   margin:0 auto;
   padding: 1rem;
+  /* padding-bottom: 2rem; */
+  color:var(--text-primary-clr)
 }
 
 main{
@@ -87,21 +96,31 @@ section:not(#landing){
 
 h2{
   text-align: center;
-  font-family: 'Fredoka One', cursive;
+  font-size:clamp(1rem, 1.6vw, 2.6rem);
   color: var(--accent-clr);
+  /* margin-top: 2rem; */
+  margin-bottom: 2rem;
   transition: color 1s ease-in-out;
+}
+h2::before, h2::after{
+  content: " - ";
+  color: var(--accent-clr);
+}
+p{
+  color: var(--text-primary-clr);
+  text-align: justify;
 }
 
 .fade-in {
   opacity: 0;
   color: var(--primary-clr);
-  
+ 
   transition: opacity .5s ease-in-out;
 }
 
-.fade-in.visible {
+/* .fade-in.visible {
   opacity: 1;
-}
+} */
 .over-flow {
   overflow: auto;
 }
@@ -174,7 +193,7 @@ h2{
     right: 0.6rem;
   }
 }
-
+/* 
 @media (prefers-color-scheme: light) {
 :root{
   --bg-primary-clr:rgb(240, 240, 240);
@@ -186,4 +205,4 @@ h2{
   --accent-clr:rgb(122, 44, 91);
 
 }
-}
+} */
