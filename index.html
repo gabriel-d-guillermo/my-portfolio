@@ -13,7 +13,6 @@
     <script src="https://kit.fontawesome.com/b63eb65403.js" crossorigin="anonymous"></script>
 
     <!-- styles -->
-
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/landing.css">
@@ -25,14 +24,14 @@
 
 <header>
     <div class="container">
-            <a class="navbar-logo " href="#"><i class="fa-brands fa-gg fa-2x"></i></a>
+        <a class="navbar-logo " href="#home" aria-label="home"><i class="fa-brands fa-gg fa-2x"></i></a>
         <span role="button" onclick="toogleNavBar()" class="bar-icon">
          <i class="fa-solid fa-bars fa-2x"></i> 
         </span > 
         <nav> 
-            <span class="btn-collapse" role="button" onclick="toogleNavBar()">X</span>   
+            <span class="btn-collapse" role="button" aria-label="close navbar" onclick="toogleNavBar()">X</span>   
             <ul class="nav-list">
-                <li class="nav-list-link" ><a href="#" >Home</a></li>
+                <li class="nav-list-link" ><a href="#home" >Home</a></li>
                 <li class="nav-list-link"><a href="#about">About</a></li>
                 <li class="nav-list-link"><a href="#tools">Tools</a></li>
                 <li class="nav-list-link"><a href="#projects">Projects</a></li>
@@ -43,8 +42,8 @@
 </header>
    
 <main>  
-    <section id="landing">
-        <div class="container ">
+    <section id="home">
+        <div class="landing container">
             <div class="toggle-theme" >
                 <div class="icon-wrapper">
                     <div class="slider"></div>
@@ -52,79 +51,124 @@
                     <i class="fa-solid fa-moon icon-opacity-moon"></i>
                 </div> 
             </div>
-
-            <img src="./assets/images/my-image.png" alt="profile image" title="profile image">   
-
-            <h1 class="">Hello, I'm<br/>Gabriel Guillermo</h1>
-            <span>I am a junior full-stack web developer</span>
-            <a class="btn-resume" href="./assets/Gabriel Guillermo.pdf" target="_blank">Resume</a>
-            <ul>
-                <li> <a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                <li> <a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li> <a href="#"><i class="fa-solid fa-envelope"></i></a></li>
-            </ul>              
-        </div> 
+                 
+            <div class="landing-content">              
+                <div class="hero">
+                    <h2 class="">Hello, I'm  <img src="./assets/images/my-image.png" alt="profile image" title="profile image"> 
+                        <br/> Gabriel Guillermo</h2>
+                    <span>I am a junior full-stack web developer</span>
+                    <a class="btn-resume" href="./assets/Gabriel Guillermo.pdf" target="_blank">Resume</a>
+                </div>     
+                <ul class="social-media">
+                    <li> <a href="#" aria-label="facebook"><i class="fa-brands fa-square-facebook" target="_blank"></i></a></li>
+                    <li> <a href="https://www.linkedin.com/in/gabriel-guillermo-7730b9247/" target="_blank" aria-label="linked in"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li> <a href="mailto:gabrieldguillermo@gmail.com" aria-label="google mail"><i class="fa-solid fa-envelope" target="_blank"></i></a></li>
+                </ul> 
+            </div> 
+        </div>
     </section>
 
     <section id="about">
-       <div class="container">
-            <h2>About</h2>  
-<!--            
-                    <p >Hello, my name is Gabriel Delarmente Guillermo, I'm a <strong>junior full-stack web developer </strong>and I graduated from Eastern Visayas State University Tanauan Campus in the academic year 2020–2021 with a Bachelor of Science in Information Technology.
-                    </p>
-                
-                    <p>Following graduation, I spent a year working as a freelancer, taking on Capstone projects from my junior peers. Before deciding to take on such projects, I also made a respectable contribution to the creation of our group's capstone project and earned the title of programmer of the year for our batch.
-                    </p>
-                    <p>Before signing up to take part in Zuitt Coding Bootcamp, I was familiar with a few basic programming languages that are used to build web sites. In light of this, I choose to join in the bootcamp in order to enhance my current programming skills and learn more about Web development, specifically about the MERN stack, one of the most well-known stacks at the time. 
-                    </p>
-                     -->
-            <div class="about-wrapper">
-                <div class="about-content"> 
-                    <h3>Education:</h3>
+       <div class="about container">
+            <h3>About</h3>  
+            <div class="about-content-wrapper">
+                <div class="card"> 
+                    <h4>Education:</h4>
                     <p>
                         I graduated from Eastern Visayas State University Tanauan Campus in the academic year 2020–2021 with a Bachelor of Science in Information Technology.
                     </p>
                 </div>
-
-                <div class="about-content"> 
-                    <h3>Experience:</h3>
+                <div class="card"> 
+                    <h4>Experience:</h4>
                     <p>
                         Following graduation, I spent a year working as a freelancer, taking on Capstone projects from my junior peers. Before deciding to take on such projects, I also made a respectable contribution to the creation of our group's capstone project and earned the title of programmer of the year for our batch.
                     </p>
                 </div>
-
-                <div class="about-content">    
-                    <h3>Certificate:</h3>
+                <div class="card">    
+                    <h4>Certificate:</h4>
                     <p>
                         Before signing up to take part in Zuitt Coding Bootcamp, I was familiar with a few basic programming languages that are used to build web sites. In light of this, I choose to join in the bootcamp in order to enhance my current programming skills and learn more about Web development, specifically about the MERN stack, one of the most well-known stacks at the time. 
                     </p>
-                </div>
+                </div>  
             </div>
-                   
-                  
-                
-               
-      
        </div>
     </section>
     <section  id="tools">
-        <div class="container">
-         <h2>Tools</h2>
+        <div class="tools container">
+         <h3>Tools</h3>
+         <div class="core-tools-wrapper">
+            <h4>Core Tools</h4>
+            <ul class="core-tools">
+                <li>
+                    <img src="./assets/images/logo-html5.png" alt="html5">
+        
+                </li>
+                <li >
+                    <img src="./assets/images/logo-css3.png" alt="css3">
+                   
+                </li>
+                <li>
+                    <img src="./assets/images/logo-javascript.png" alt="javascrpipt">
+                 
+                </li>
+                <li>
+                    <img src="./assets/images/logo-php.png" alt="php">
+                    
+                </li>
+            </ul>  
+         </div>
+         <div class="other-tools-wrapper">
+            <h4>Other Tools</h4>
+            <ul class="other-tools">
+                <li>
+                    <img src="./assets/images/logo-bootstrap.png" alt="bootcamp">
+                </li>
+                <li>
+                    <img src="./assets/images/logo-mongodb.png" alt="mongodb">
+                 
+                </li>
+                <li>
+                    <img src="./assets/images/logo-expressjs.png" alt="express js">
+                   
+                </li>
+                <li>
+                    <img src="./assets/images/logo-react.png" alt="react js">
+                    
+                </li>
+                <li>
+                    <img src="./assets/images/logo-nodejs.png" alt="node js">
+                </li>
+                <li>
+                    <img src="./assets/images/logo-git.png" alt="git">
+                    
+                </li>
+                <li>
+                    <img src="./assets/images/logo-postman.png" alt="postman">
+                    
+                </li>
+             
+                <li>
+                    <img src="./assets/images/logo-xampp.png" alt="xammp">
+                </li>
+            
+            </ul>  
+         </div>
          
+
         </div>
      </section>
-     <section  id="projects">
+     <!-- <section  id="projects">
         <div class="container">
-         <h2>Tools</h2>
+         <h3>Tools</h3>
        
         </div>
-     </section>
-     <section  id="contact">
+     </section> -->
+     <!-- <section  id="contact">
         <div class="container">
-         <h2>Tools</h2>
+         <h3>Tools</h3>
          
         </div>
-     </section>
+     </section> -->
 </main>
 <footer></footer>
 

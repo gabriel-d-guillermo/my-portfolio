@@ -1,3 +1,198 @@
-#tools{
+#tools {
     background-color: var(--bg-primary-clr);
+}
+
+.tools {
+    --width-li: 100px;
+    position: relative;
+    padding: 5.5rem 0.5rem 5rem 0.5rem;
+    /* padding-bottom: 5rem; */
+
+}
+
+.tools h4 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--light-blue-clr)
+}
+
+
+.core-tools-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 23rem;
+    padding-top: 3rem;
+    overflow: hidden;
+
+}
+
+.core-tools {
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    right: 0;
+    width: calc(var(--width-li) * 2);
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    transform-origin: center center;
+    animation: spinner 50s linear infinite
+}
+
+.core-tools img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.core-tools li {
+    position: absolute;
+    font-size: 1.5rem;
+    width: var(--width-li);
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: spinner 50s linear infinite reverse;
+
+}
+
+.core-tools li:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.core-tools li:nth-child(2) {
+    right: 0;
+    top: 0;
+}
+
+.core-tools li:nth-child(3) {
+    right: 0;
+    bottom: 0;
+}
+
+.core-tools li:nth-child(4) {
+    left: 0;
+    bottom: 0;
+    padding: .7rem;
+
+}
+
+.other-tools {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-inline: 2rem;
+}
+
+.other-tools>li {
+    cursor: pointer;
+    position: relative;
+    width: var(--width-li);
+    aspect-ratio: 1/1;
+    isolation: isolate;
+    border-radius: 50%;
+}
+
+
+.other-tools>*::after {
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: .9rem;
+    /* opacity: 0; */
+    transition: opacity .5s ease-in-out;
+}
+
+.other-tools>li:hover::after {
+    opacity: 1;
+
+}
+
+.other-tools li:nth-child(1):after {
+    content: 'Bootstrap';
+}
+
+.other-tools li:nth-child(2)::after {
+    content: 'MongoDB';
+
+}
+
+.other-tools li:nth-child(3)::after {
+    content: 'Express js';
+}
+
+.other-tools li:nth-child(4)::after {
+    content: 'React js';
+}
+
+.other-tools li:nth-child(5)::after {
+    content: 'Node js';
+}
+
+.other-tools li:nth-child(6)::after {
+    content: 'Git';
+}
+
+.other-tools li:nth-child(7)::after {
+    content: 'Postman';
+}
+
+.other-tools li:nth-child(8)::after {
+    content: 'Xampp';
+}
+
+
+.other-tools img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* transition: opacity .7s ease-in-out; */
+}
+
+@keyframes spinner {
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* .spin::before {
+    animation:spinner 1.5s linear infinite ;
+    animation-play-state: inherit;
+    border: solid 5px #cfd0d1;
+    border-bottom-color: #1c87c9;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: transform;
+  } */
+@media (max-width:510px) {
+    .tools {
+        --width-li: 80px;
+
+    }
+
+    .other-tools {
+        padding-inline: 0;
+    }
+}
+
+@media (hover: hover) {
+    .other-tools>*::after {
+        opacity: 0;
+    }
 }
